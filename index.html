@@ -24,6 +24,28 @@
         </div>
     </nav>
 
+    <!-- Floating Action Buttons -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/919876543210?text=Hello%20Shree%20Ram%20Pest%20Control%2C%20I%20need%20pest%20control%20service." class="floating-btn whatsapp-btn" title="Chat on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:+919876543210" class="floating-btn call-btn" title="Call Now">
+            <i class="fas fa-phone"></i>
+        </a>
+    </div>
+
+    <!-- Mobile Action Bar -->
+    <div class="mobile-action-bar">
+        <div class="mobile-actions">
+            <a href="https://wa.me/919876543210?text=Hello%20Shree%20Ram%20Pest%20Control%2C%20I%20need%20pest%20control%20service." class="mobile-action-btn mobile-whatsapp">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            <a href="tel:+919876543210" class="mobile-action-btn mobile-call">
+                <i class="fas fa-phone"></i> Call Now
+            </a>
+        </div>
+    </div>
+
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
@@ -41,15 +63,15 @@
     <section class="stats">
         <div class="stats-container">
             <div class="stat-item">
-                <span class="stat-number">15+</span>
+                <span class="stat-number" data-target="15">0</span>
                 <span class="stat-label">Years Experience</span>
             </div>
             <div class="stat-item">
-                <span class="stat-number">5000+</span>
+                <span class="stat-number" data-target="5000">0</span>
                 <span class="stat-label">Happy Customers</span>
             </div>
             <div class="stat-item">
-                <span class="stat-number">99.9%</span>
+                <span class="stat-number" data-target="99.9">0</span>
                 <span class="stat-label">Success Rate</span>
             </div>
             <div class="stat-item">
@@ -65,7 +87,7 @@
         <p class="section-subtitle">Comprehensive pest control solutions tailored to your specific needs</p>
         
         <div class="carousel-container">
-            <div class="carousel-track">
+            <div class="carousel-track" id="serviceTrack">
                 <div class="service-card">
                     <div class="card-image">🏠</div>
                     <h3 class="card-title">Residential Pest Control</h3>
@@ -125,6 +147,37 @@
                     <h3 class="card-title">Cockroach Control</h3>
                     <p class="card-description">Comprehensive cockroach control for German, American, and other common cockroach species, with a focus on sanitation and exclusion.</p>
                 </div>
+
+                <!-- Duplicate cards for seamless loop -->
+                <div class="service-card">
+                    <div class="card-image">🏠</div>
+                    <h3 class="card-title">Residential Pest Control</h3>
+                    <p class="card-description">Complete home protection against ants, cockroaches, termites, rodents, and other common household pests using family-safe methods.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="card-image">🏢</div>
+                    <h3 class="card-title">Commercial Services</h3>
+                    <p class="card-description">Professional pest management for offices, restaurants, hotels, and retail spaces with customized treatment plans and minimal business disruption.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="card-image">🐜</div>
+                    <h3 class="card-title">Termite Treatment</h3>
+                    <p class="card-description">Advanced termite detection and elimination using latest technology. Pre and post-construction treatments with long-term protection guarantees.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="card-image">🦟</div>
+                    <h3 class="card-title">Mosquito Control</h3>
+                    <p class="card-description">Effective mosquito management programs including breeding source elimination, fogging treatments, and preventive measures for disease control.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="card-image">🐀</div>
+                    <h3 class="card-title">Rodent Control</h3>
+                    <p class="card-description">Comprehensive rodent management including inspection, exclusion, trapping, and ongoing monitoring to prevent re-infestation.</p>
+                </div>
             </div>
             <button class="carousel-button prev"><i class="fas fa-chevron-left"></i></button>
             <button class="carousel-button next"><i class="fas fa-chevron-right"></i></button>
@@ -140,7 +193,9 @@
                 <p>Our certified technicians are dedicated to ensuring the safety of your family, pets, and environment. We pride ourselves on customer satisfaction and offer comprehensive service guarantees, making us the preferred choice for thousands of satisfied customers.</p>
             </div>
             <div class="about-image">
-                <img src="images/pestimg1.jpg" alt="Technician inspecting a kitchen">
+                <div style="width: 100%; height: 300px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem;">
+                    Professional Pest Control Service
+                </div>
             </div>
         </div>
     </section>
@@ -148,24 +203,122 @@
     <!-- Reviews Section -->
     <section class="reviews" id="reviews">
         <div class="review-section-container">
-            <div class="review-image">
-                <img src="images/pestimg2.jpg" alt="Happy family in a pest-free home">
-            </div>
-            <div class="review-content">
-                <h2 class="section-title">What Our Customers Say</h2>
-                <div class="review-container">
-                    <div class="review-card">
-                        <p class="review-text">"Shree Ram Pest Control is the best! They were professional, and the results were amazing. I would highly recommend them to anyone."</p>
-                        <p class="review-author">- John Doe</p>
+            <h2 class="section-title">What Our Customers Say</h2>
+            <p class="section-subtitle">Real reviews from our satisfied customers</p>
+            
+            <div class="review-grid">
+                <div class="review-card">
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar">RK</div>
+                        <div class="reviewer-details">
+                            <h4>Rajesh Kumar</h4>
+                            <div class="reviewer-email">rajesh.kumar@gmail.com</div>
+                        </div>
                     </div>
-                    <div class="review-card">
-                        <p class="review-text">"I was very impressed with the service I received. The technicians were knowledgeable and friendly, and they took care of my pest problem quickly and efficiently."</p>
-                        <p class="review-author">- Jane Smith</p>
+                    <div class="stars">
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
                     </div>
-                    <div class="review-card">
-                        <p class="review-text">"I've been using Shree Ram Pest Control for years, and I've always been happy with their service. They're reliable, affordable, and they always get the job done right."</p>
-                        <p class="review-author">- Peter Jones</p>
+                    <p class="review-text">"Excellent service! They completely eliminated the termite problem in my house. The team was professional, punctual, and used safe methods. Highly recommended for anyone facing pest issues."</p>
+                    <div class="review-date">January 15, 2025</div>
+                </div>
+
+                <div class="review-card">
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar">PS</div>
+                        <div class="reviewer-details">
+                            <h4>Priya Sharma</h4>
+                            <div class="reviewer-email">priya.sharma@gmail.com</div>
+                        </div>
                     </div>
+                    <div class="stars">
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                    </div>
+                    <p class="review-text">"Amazing results! The cockroach problem in my kitchen is completely gone. The technicians were knowledgeable and explained everything clearly. Very satisfied with their service."</p>
+                    <div class="review-date">January 12, 2025</div>
+                </div>
+
+                <div class="review-card">
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar">AV</div>
+                        <div class="reviewer-details">
+                            <h4>Amit Verma</h4>
+                            <div class="reviewer-email">amit.verma@gmail.com</div>
+                        </div>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                    </div>
+                    <p class="review-text">"Professional and reliable service. They handled our office pest problem efficiently without disrupting our work. Great value for money and excellent customer support."</p>
+                    <div class="review-date">January 10, 2025</div>
+                </div>
+
+                <div class="review-card">
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar">SG</div>
+                        <div class="reviewer-details">
+                            <h4>Sunita Gupta</h4>
+                            <div class="reviewer-email">sunita.gupta@gmail.com</div>
+                        </div>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                    </div>
+                    <p class="review-text">"Outstanding mosquito control service! My family can now enjoy our garden without worrying about mosquitoes. The treatment was safe for children and pets."</p>
+                    <div class="review-date">January 8, 2025</div>
+                </div>
+
+                <div class="review-card">
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar">MJ</div>
+                        <div class="reviewer-details">
+                            <h4>Manoj Joshi</h4>
+                            <div class="reviewer-email">manoj.joshi@gmail.com</div>
+                        </div>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                    </div>
+                    <p class="review-text">"Best pest control service in the area! They solved our rat problem quickly and provided valuable tips to prevent future infestations. Highly professional team."</p>
+                    <div class="review-date">January 5, 2025</div>
+                </div>
+
+                <div class="review-card">
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar">NK</div>
+                        <div class="reviewer-details">
+                            <h4>Neha Kapoor</h4>
+                            <div class="reviewer-email">neha.kapoor@gmail.com</div>
+                        </div>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                    </div>
+                    <p class="review-text">"Excellent customer service and effective treatment. The ant problem in my home is completely resolved. They also provided a warranty which shows their confidence in their work."</p>
+                    <div class="review-date">January 3, 2025</div>
                 </div>
             </div>
         </div>
@@ -176,11 +329,20 @@
         <h2>Get Professional Help Today</h2>
         <p class="contact-subtitle">Contact Shree Ram Pest Control for immediate assistance and free consultation</p>
         
+        <div class="contact-buttons">
+            <a href="https://wa.me/919876543210?text=Hello%20Shree%20Ram%20Pest%20Control%2C%20I%20need%20pest%20control%20service." class="contact-btn whatsapp-contact">
+                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+            <a href="tel:+919876543210" class="contact-btn call-contact">
+                <i class="fas fa-phone"></i> Call Now
+            </a>
+        </div>
+        
         <div class="social-icons">
             <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
             <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
             <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://wa.me/919876543210" class="social-icon"><i class="fab fa-whatsapp"></i></a>
             <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
             <a href="tel:+919876543210" class="social-icon"><i class="fas fa-phone"></i></a>
         </div>
@@ -205,8 +367,9 @@
                 <h4>Follow Us</h4>
                 <ul>
                     <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#" target="_blank">Instagram</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="https://wa.me/919876543210">WhatsApp</a></li>
                 </ul>
             </div>
         </div>
